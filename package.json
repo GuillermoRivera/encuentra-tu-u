@@ -27,6 +27,10 @@
       "email": "jeffery_cordoba82132@elpoli.edu.co"
     }
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/guillermorivera/encuentra-tu-u.git"
+  },
   "license": "MIT",
   "description": "Prototipo funcional del proyecto que se lleva a cabo dentro de la materia proyecto integrador de la ingeniería informática del Politécnico Colombiano Jaime Isaza Cadavid en la ciudad de Medellín."
 }
