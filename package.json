@@ -15,18 +15,8 @@
     "serve-favicon": "~2.4.5"
   },
   "main": "app.js",
-  "devDependencies": {
-    "eslint": "^4.11.0",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0"
-  },
-  "keywords": [
-    "búsqueda",
-    "universidad",
-    "educación superior",
-    "programas académicos",
-    "institución"
-  ],
+  "devDependencies": {},
+  "keywords": ["búsqueda", "universidad", "educación superior", "programas académicos", "institución"],
   "contributors": [
     {
       "name": "Juan Guillermo Rivera Orozco",

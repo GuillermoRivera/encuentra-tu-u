@@ -10,7 +10,7 @@ const search = require('./routes/search');
 
 const app = express();
 
-const PORT = 3000 || ENV_PORT;
+const PORT = 3000 || ENV_PORT
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
