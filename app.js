@@ -10,6 +10,8 @@ const search = require('./routes/search');
 
 const app = express();
 
+const PORT = 3000 || ENV_PORT
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -42,5 +44,9 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.listen(PORT, () => {
+  console.log(`Server running at port ${PORT}`)
+})
 
 module.exports = app;

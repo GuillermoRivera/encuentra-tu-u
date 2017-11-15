@@ -3,6 +3,9 @@ body {
   font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background: radial-gradient(circle,#FFF, #557A8C);
+  height: 100vh;
+
 }
 
 a {
