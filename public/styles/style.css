@@ -1,13 +1,40 @@
 body {
-  box-sizing: border-box;
+  background: radial-gradient(circle,#FFF, #557A8C);
   font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle,#FFF, #557A8C);
-  height: 100vh;
-
 }
 
 a {
   color: #00B7FF;
+}
+
+.header {
+  background-color: #000;
+  width: 100%;
+}
+
+.logo {
+  height: 100px;
+  padding: 8px 0 8px 25px;
+}
+
+.logo img {
+  border-radius: 7px;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/* Footer Styles */
+.page-footer {
+  bottom: 0;
+  display: block;
+  position: absolute;
+  text-align: center;
+  width: 100%;
 }

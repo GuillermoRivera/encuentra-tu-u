@@ -16,7 +16,13 @@
   },
   "main": "app.js",
   "devDependencies": {},
-  "keywords": ["búsqueda", "universidad", "educación superior", "programas académicos", "institución"],
+  "keywords": [
+    "búsqueda",
+    "universidad",
+    "educación superior",
+    "programas académicos",
+    "institución"
+  ],
   "contributors": [
     {
       "name": "Juan Guillermo Rivera Orozco",
