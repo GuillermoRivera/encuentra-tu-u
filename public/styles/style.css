@@ -14,8 +14,24 @@ a {
 }
 
 .header {
+  align-items: center;
   background-color: #000;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
+}
+
+.header .search {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 4px;
+  display: flex;
+  height: 45px;
+}
+
+.search-icon {
+  color: black;
+  margin-right: 5px;
 }
 
 .logo {
@@ -30,11 +46,15 @@ a {
   max-width: 100%;
 }
 
-/* Footer Styles */
-.page-footer {
-  bottom: 0;
-  display: block;
-  position: absolute;
-  text-align: center;
-  width: 100%;
+/* Search */
+.search__main-title {
+  font-size: 1.5em;
+  font-weight: bolder;
 }
+
+/* Card */
+.card__title {
+  white-space: nowrap;
+}
+
+/* Footer Styles */
