@@ -1,0 +1,13 @@
+form.col.s12(action="/search" method="GET")
+  .row
+    .input-field.col.s3
+      select
+        option(value='') Tipo de búsqueda
+        option(value='1') Institución
+        option(value='2') Programa
+    .input-field.col.s9
+      input(id="first_name" type="text" class="validate")
+      label(for="email" data-error="wrong" data-success="right") Ingresa el nombre a buscar
+  .row
+    .input-field.col.s4
+      input.waves-effect.waves-light.btn(type="submit" value="Buscar")

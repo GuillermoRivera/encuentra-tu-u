@@ -1,3 +1,9 @@
+@import './card.css';
+@import './filters.css';
+@import './form.css';
+@import './header.css';
+@import './paginator.css';
+
 body {
   background: radial-gradient(circle,#FFF, #557A8C);
   font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
@@ -13,48 +19,8 @@ a {
   color: #00B7FF;
 }
 
-.header {
-  align-items: center;
-  background-color: #000;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.header .search {
-  align-items: center;
-  background-color: #fff;
-  border-radius: 4px;
-  display: flex;
-  height: 45px;
-}
-
-.search-icon {
-  color: black;
-  margin-right: 5px;
-}
-
-.logo {
-  height: 100px;
-  padding: 8px 0 8px 25px;
-}
-
-.logo img {
-  border-radius: 7px;
-  display: block;
-  max-height: 100%;
-  max-width: 100%;
-}
-
 /* Search */
 .search__main-title {
   font-size: 1.5em;
   font-weight: bolder;
 }
-
-/* Card */
-.card__title {
-  white-space: nowrap;
-}
-
-/* Footer Styles */

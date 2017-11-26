@@ -1,48 +1,13 @@
 extends layout
 block header
-  header.header
-    .logo
-      img(src="/images/logo.jpg")
-    .search
-      i.material-icons.search-icon search
-      input(type="search" placeholder="Ingresa el nombre a buscar")
+  include ../components/header/index
 block content
   .row
-    .col.s12
-      .row
-        .col.s3
-          | Tipo de programa
-          .input-field.inline
-          select
-            option(value='1') Técnico
-            option(value='2') Tecnológico
-            option(value='3') Profesional
-        .col.s3
-          | Facultad
-          .input-field.inline
-          select
-            option(value='1') Ingeniería
-            option(value='2') Ciencias agrarias
-            option(value='3') Educación física
+    include ../components/filters/index
+    include ../components/form/index
   .container
     .row
       .col.s12
         h3.search__main-title Resultados para: Politécnico Colombiano Jaime Isaza Cadavid
-        include ../components/card.pug
-  ul.pagination
-    li.disabled
-      a(href="#!")
-        i.material-icons chevron_left
-    li.active
-      a(href="#!") 1
-    li.waves-effect
-      a(href="#!") 2
-    li.waves-effect
-      a(href="#!") 3
-    li.waves-effect
-      a(href="#!") 4
-    li.waves-effect
-      a(href="#!") 5
-    li.waves-effect
-      a(href="#!")
-        i.material-icons chevron_right
+        include ../components/card/index
+  include ../components/paginator/index
