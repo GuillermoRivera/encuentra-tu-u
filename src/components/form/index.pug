@@ -1,0 +1,14 @@
+form.col.s12(action="/search" method="GET")
+  .row
+    .input-field.col.s3
+      select(id="search-type")
+        option(value='') Tipo de búsqueda
+        option(value='institution') Institución
+        option(value='program') Programa
+    .input-field.col.s9
+      input(id="search-input" type="text" class="autocomplete")
+      label(for="search-input" data-error="wrong" data-success="right") Ingresa el nombre a buscar
+      datalist(id="huge-list")
+  .row
+    .input-field.col.s4
+      input.waves-effect.waves-light.btn(type="submit" value="Buscar" id="search-button")
