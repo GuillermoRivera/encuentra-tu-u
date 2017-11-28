@@ -20,14 +20,6 @@ $('#search-type').change((event) => {
     dataAutocomplete.push(JSON.parse(data).map((element) => element.name));
     $(function () {
       console.log(dataAutocomplete);
-      $('input.autocomplete').autocomplete({
-        data: dataAutocomplete[0],
-        limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
-        onAutocomplete: function(val) {
-          console.log('Hello world');
-        },
-        minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
-      });
     });
   });
 });
