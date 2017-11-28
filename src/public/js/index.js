@@ -1,13 +1,11 @@
-$(document).ready(function() {
+$(document).ready(() => {
   $('select').material_select();
-})
+});
 
-let dataAutocomplete = [];
-let flag = false;
+const dataAutocomplete = [];
 
 $('#search-type').change((event) => {
   let resource;
-  let url= 'http://localhost:3000/';
   if (event.target.value === 'institution') {
     resource = 'institutions';
   } else if (event.target.value === 'program') {
@@ -17,9 +15,9 @@ $('#search-type').change((event) => {
     method: 'GET',
     url: `http://localhost:3000/${resource}`,
   }).then((data) => {
-    dataAutocomplete.push(JSON.parse(data).map((element) => element.name));
-    $(function () {
-      console.log(dataAutocomplete);
+    dataAutocomplete.push(JSON.parse(data).map(element => element.name));
+    $(() => {
+      // console.log(dataAutocomplete);
     });
   });
 });
