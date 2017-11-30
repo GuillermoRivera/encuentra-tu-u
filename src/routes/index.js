@@ -9,7 +9,7 @@ const Program = require('../models/program');
 router.get('/', (req, res) => {
   Institution.getInstitutions((error, data) => {
     if (error) throw error;
-    // console.log(data);
+    console.log(data);
     res.render('index', { title: 'Index', data });
   });
 });
@@ -17,14 +17,14 @@ router.get('/', (req, res) => {
 router.get('/institutions', (req, res) => {
   Institution.getInstitutions((error, data) => {
     if (error) throw error;
-    res.send(JSON.stringify(data));
+    res.json(data);
   });
 });
 
 router.get('/programs', (req, res) => {
   Program.getPrograms((error, data) => {
     if (error) throw error;
-    res.send(JSON.stringify(data));
+    res.json(data);
   });
 });
 

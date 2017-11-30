@@ -10,22 +10,40 @@ const connection = mysql.createConnection({
 
 const institutionModel = {};
 
+institutionModel.getConnection = function getConnection() {
+  connection.connect((err) => {
+    if (err) throw err;
+    console.log();
+  });
+  return 'Connected to database';
+};
+
+institutionModel.closeConnection = function closeConnection() {
+  connection.end((error) => {
+    if (error) throw error;
+    console.log('Disconnected from database');
+  });
+  return 'Disconnected from database';
+};
+
 institutionModel.getInstitutions = (callback) => {
-  if (connection) {
-    connection.query(`SELECT * FROM institution ORDER BY name`, (error, rows) => {
+  if (institutionModel.getConnection() === 'Connected to database') {
+    connection.query(`SELECT * FROM instituciones ORDER BY nombre_inst`, (error, rows) => {
       if (error) throw error;
       callback(null, rows);
     });
+    institutionModel.closeConnection();
   }
 };
 
-institutionModel.getInstitutionsByType = (callback, type) => {
-  if (connection) {
-    connection.query(`SELECT * FROM institution ORDER BY name WHERE type = ${type}`, (error, rows) => {
-      if (error) throw error;
-      callback(null, rows);
-    });
-  }
-};
+// institutionModel.getInstitutionsByType = (callback, type) => {
+//   if (connection) {
+//     const a = `SELECT * FROM institution ORDER BY name WHERE type = ${type}`;
+//     connection.query( (error, rows) => {
+//       if (error) throw error;
+//       callback(null, rows);
+//     });
+//   }
+// };
 
 module.exports = institutionModel;

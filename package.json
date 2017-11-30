@@ -4,7 +4,7 @@
   "private": false,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "./node_modules/mocha/bin/mocha --watch",
+    "test": "./node_modules/mocha/bin/mocha --watch --timeout 10000",
     "lint": "./node_modules/.bin/eslint ./"
   },
   "dependencies": {
@@ -20,10 +20,12 @@
   "main": "app.js",
   "devDependencies": {
     "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
     "eslint": "^4.12.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
-    "mocha": "^4.0.1"
+    "mocha": "^4.0.1",
+    "supertest": "^3.0.0"
   },
   "keywords": [
     "búsqueda",
