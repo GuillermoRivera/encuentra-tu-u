@@ -1,11 +1,11 @@
 module.exports = {
-  "extends": "airbnb-base",
   "rules": {
+    "no-console": 0,
     "semi": ["error", "always"],
     "quotes": ["error", "single", { "allowTemplateLiterals": true }],
     "prefer-destructuring": ["error", {
       "array": false,
-      "object": false
+      "object": false,
     }],
   },
   "globals": {
@@ -15,5 +15,6 @@ module.exports = {
     "equal": true,
     "$": true,
     "document": true,
-  }
+  },
+  "extends": "airbnb-base",
 };

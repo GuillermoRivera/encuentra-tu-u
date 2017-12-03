@@ -7,11 +7,7 @@ const Program = require('../models/program');
 
 /* GET home page. */
 router.get('/', (req, res) => {
-  Institution.getInstitutions((error, data) => {
-    if (error) throw error;
-    console.log(data);
-    res.render('index', { title: 'Index', data });
-  });
+  res.render('index', { title: 'Index' });
 });
 
 router.get('/institutions', (req, res) => {
