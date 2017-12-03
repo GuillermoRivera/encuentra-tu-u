@@ -5,6 +5,7 @@ const programModel = {};
 programModel.getPrograms = (callback) => {
   pool.getConnection((err, connection) => {
     if (err) throw err;
+    console.log('Connected to database');
     connection.query(`SELECT * FROM programas ORDER BY nombre_prog`, (error, rows) => {
       callback(null, rows);
       connection.release();
