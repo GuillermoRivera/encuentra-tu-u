@@ -2,10 +2,7 @@ $(document).ready(() => {
   $('select').material_select();
 });
 
-// const dataAutocomplete = [];
-
 $('#search-type').change((event) => {
-  console.log(event.target.value);
   let resource;
   if (event.target.value === 'institution') {
     resource = 'institutions';
@@ -28,9 +25,10 @@ $('#search-type').change((event) => {
         fields[field.nombre_prog] = null;
       });
     }
-    console.log(fields);
+
     $('#search-input').autocomplete({
       data: fields,
+      limit: 20,
       minLength: 1,
     });
   });
