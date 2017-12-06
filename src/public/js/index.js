@@ -2,6 +2,16 @@ $(document).ready(() => {
   $('select').material_select();
 });
 
+$('#search-button').click((event) => {
+  if ($('input.select-dropdown').val() === 'Tipo de búsqueda') {
+    alert('Por favor seleccione el tipo de búsqueda');
+  }
+
+  if ($('#search-input').val() === '' && $('input.select-dropdown').val() !== 'Tipo de búsqueda') {
+    alert('Por favor ingrese un nombre para iniciar la búsqueda');
+  }
+});
+
 $('#search-type').change((event) => {
   let resource;
   if (event.target.value === 'institution') {
@@ -33,3 +43,9 @@ $('#search-type').change((event) => {
     });
   });
 });
+
+// $('#filter-inst-type').change((event) => {
+//   if (event.target.value === 1) {
+
+//   }
+// });
