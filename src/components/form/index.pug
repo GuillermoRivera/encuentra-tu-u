@@ -1,12 +1,12 @@
-form.col.s12(action="/search" method="GET" autocomplete="off")
+form.col.s12(action="/search" method="get" autocomplete="off" id="search-form")
   .row
     .input-field.col.s3
-      select(id="search-type")
+      select(id="search-type" required name="type")
         option(value='' disable selected) Tipo de búsqueda
         option(value='institution') Institución
         option(value='program') Programa
     .input-field.col.s9
-      input(id="search-input" type="text" class="autocomplete")
+      input(id="search-input" type="text" class="autocomplete" name="name" required)
       label(for="search-input" data-error="wrong" data-success="right") Ingresa el nombre a buscar
   .row
     .input-field.col.s4
