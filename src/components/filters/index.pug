@@ -1,34 +1,34 @@
 .col.s12
-  .row
+  .row.filters
     if (tipo === 'program')
-      .col.s3
-        | Tipo de institución
+      .col.s12.m6
+        label.label Tipo de institución
         .input-field.inline
           select
-            option(value='1') universidad
-            option(value='2') institución universitaria
-            option(value='3') institución tecnológica
-            option(value='4') institución técnica profesional
-      .col.s3
-        | Sector
+            option(value='1') Universidad
+            option(value='2') Institución universitaria
+            option(value='3') Institución tecnológica
+            option(value='4') Institución técnica profesional
+      .col.s12.m6
+        label.label Sector
         .input-field.inline
           select
-            option(value='1') público
-            option(value='2') privado
+            option(value='1') Público
+            option(value='2') Privado
       
     else if (tipo === 'institution')
-      .col.s3
-        | Tipo de programa
+      .col.s12.m6
+        labe.label Tipo de programa
         .input-field.inline
           select
-            option(value='1') técnico
-            option(value='2') tecnológico
-            option(value='3') profesional
-      .col.s3
-        | Facultad
+            option(value='1') Técnico
+            option(value='2') Tecnológico
+            option(value='3') Profesional
+      .col.s12.m6
+        label.label Facultad
         .input-field.inline
           select
-            option(value='1') ingeniería
-            option(value='2') administración
-            option(value='3') medicina
+            option(value='1') Ingeniería
+            option(value='2') Administración
+            option(value='3') Medicina
     
