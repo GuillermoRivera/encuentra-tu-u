@@ -4,10 +4,9 @@ block header
 block content
   .row
     include ../components/filters/index
-    include ../components/form/index
   .container
     .row
       .col.s12
-        h3.search__main-title Resultados para: Politécnico Colombiano Jaime Isaza Cadavid
-        include ../components/card/index
-  include ../components/paginator/index
+        h3.search__main-title Resultados para: #{data[0].nombre_inst.toUpperCase()}
+        if data && data.length
+          include ../components/card/index
