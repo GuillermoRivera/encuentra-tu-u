@@ -2,12 +2,6 @@
 @import './filters.css';
 @import './form.css';
 @import './header.css';
-@import './paginator.css';
-
-body {
-  background: radial-gradient(circle,#FFF, #557A8C);
-  font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
-}
 
 * {
   box-sizing: border-box;
@@ -15,11 +9,43 @@ body {
   padding: 0;
 }
 
+.page-content {
+  background: radial-gradient(circle,#FFF, #557A8C);
+  font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.search-page {
+  height: 100%;
+}
+
+h1 {
+  font-size: 2em;
+}
+
 a {
   color: #00B7FF;
 }
 
-/* Search */
+footer {
+  flex: 1 0 auto;
+  padding-bottom: 20px;
+}
+
+footer a {
+  color: black;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.principal-container {
+  height: 100%;
+}
+
 .search__main-title {
   font-size: 1.5em;
   font-weight: bolder;

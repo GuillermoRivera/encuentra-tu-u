@@ -1,6 +1,13 @@
 extends layout
 
+block header
+  include ../components/header/index
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+  .error
+    .container
+      .row
+        .col.s8.m12
+          h1.error-title Lo sentimos, no encontramos resultados con tus criterios de búsqueda.
+      .row
+        .col.s12.center
+          a(href="/" class="waves-effect waves-light btn") Ir al inicio

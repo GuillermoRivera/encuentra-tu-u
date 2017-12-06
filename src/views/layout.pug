@@ -2,13 +2,25 @@ doctype html
 html
   head
     meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title= title
     link(href="https://fonts.googleapis.com/icon?family=Material+Icons" ,rel="stylesheet")
     link(rel="stylesheet" , href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css")
     link(rel='stylesheet', href='/styles/style.css')
   body
-    block header
-    block content
+    - var style = '';
+    if (view === 'search')
+      - style = 'search-page';
+    .page-content(class=style)
+      block header
+      block content
+      footer.center
+        p 
+          | Made with <i class="material-icons">favorite</i> by 
+          a(href="https://www.github.com/guillermorivera") Juan Guillermo Rivera 
+          | and Jeffery Córdoba.
+
     script(src="https://code.jquery.com/jquery-3.2.1.min.js")
     script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js")

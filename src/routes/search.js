@@ -12,7 +12,12 @@ router.get('/', (req, res) => {
     Program.getProgramsByInstitution(req.query.name, (error, data) => {
       if (error) throw error;
       if (data && data.length) {
-        res.render('search', { title: `Programas de educación superior en ${data[0].nombre_inst}`, data, tipo: req.query.type });
+        res.render('search', {
+          title: `Programas de educación superior en ${data[0].nombre_inst}`,
+          data,
+          tipo: req.query.type,
+          view: 'search',
+        });
       } else {
         res.render('error', { error });
       }
@@ -21,7 +26,12 @@ router.get('/', (req, res) => {
     Institution.getInstitutionsByProgram(req.query.name, (error, data) => {
       if (error) throw error;
       if (data && data.length) {
-        res.render('search', { title: `${data[0].nombre_prog} en instituciones de Medellín`, data, tipo: req.query.type });
+        res.render('search', {
+          title: `${data[0].nombre_prog} en instituciones de Medellín`,
+          data,
+          tipo: req.query.type,
+          view: 'search',
+        });
       } else {
         res.render('error', { error });
       }
