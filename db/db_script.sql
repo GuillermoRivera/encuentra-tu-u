@@ -182,5 +182,7 @@ INSERT INTO facultad_institucion_programa VALUES (1, 2, 2, 'http://politecnicoji
 INSERT INTO facultad_institucion_programa VALUES (1, 2, 5, 'http://politecnicojic.edu.co/index.php/programas/66-ingenieria-de-productividad-y-calidad');
 INSERT INTO facultad_institucion_programa VALUES (1, 3, 3, 'https://www.udem.edu.co/index.php/2012-10-12-13-19-26/ingenieria-de-sistemas/informacion-general');
 INSERT INTO facultad_institucion_programa VALUES (1, 4, 3, 'https://www.udem.edu.co/index.php/2012-10-12-13-19-26/ingenieria-de-sistemas/informacion-general');
-INSERT INTO facultad_institucion_programa VALUES (1, 6, 3, 'https://minas.medellin.unal.edu.co/formacion/pregrado/ingenieriadesistemas');
-INSERT INTO facultad_institucion_programa VALUES (1, 7, 3, 'http://www.eafit.edu.co/pregrado-ingenieria-sistemas');
+INSERT INTO facultad_institucion_programa VALUES (1, 6, 3, 
+'http://www.eafit.edu.co/pregrado-ingenieria-sistemas');
+INSERT INTO facultad_institucion_programa VALUES (1, 7, 3, 
+'https://minas.medellin.unal.edu.co/formacion/pregrado/ingenieriadesistemas');
